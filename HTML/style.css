@@ -1,0 +1,84 @@
+*{
+
+    margin: 20px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: #418252;
+    color: #1f3d1f;
+    margin: 20px ;
+    
+}
+
+/* ================ NAVBAR ================*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center;
+
+    background-color: #e3f0d6; 
+    
+}
+
+/*============logo===========*/
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+/*for the ecomart text*/
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #206615;
+}
+
+
+/*Navigation button*/
+.nav-links a {
+    margin-left: 20px;
+    color: #1f3d1f;
+    font-weight: 500;
+}
+
+
+/* =============Section============= */
+
+.section{
+            
+            background-color: #e3f0d6; 
+            
+        }
+
+
+
+/* ================= FOOTER ================= */
+footer {
+    background: #235430;
+    color: white;
+    padding: 20px 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    margin-bottom: 6px;
+}
