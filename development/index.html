@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organic Store</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Js/cart.js"></script>
+    
+    </style>
+</head>
+<body>
+<!--==============HEADER==================-->
+<header class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="EcoMart Logo">
+        <span>EcoMart</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pages/products.html">Products</a>
+        <a href="pages/blog.html">Blog</a>
+        <a href="pages/research.html">Research</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<!-- banner -->
+    <div class="container">
+        <img src="images/newbody.jpg" alt="banner">
+        <div class="text">
+            <h1 style="font-size: 7vw; color:#1F5E3B;">EcoMart</h1><p style="font-size: 1.3vw; color:#EDEFEA;"> 
+            EcoMart is a sustainable lifestyle store offering eco-friendly products such as<br>
+            bamboo bottles, reusable bags, and zero-waste kitchen items. Our goal is to<br>
+            promote environmentally responsible living through technology.<br></p>
+            <button class="home-button" style="margin-top: 3vw; padding:3vw 7vw; "><a style="text-decoration: none; color: white;" href="pages/products.html"> Shop now </a></button>
+        </div>
+    </div>
+
+
+    <!-- best seller -->
+     <div class="section" >
+        <h1 style="padding-bottom:20px; font-size: 50px;">Our Best sellors</h1>
+        <div class="products" style="justify-content: center;"id="product-tab" >
+            <div class="product" onclick="showProduct(0)">
+            <img src="images/bamboobottle.png" alt="bamboobottle">
+            <h2>bamboo bottle</h2>
+            <p>Price: Rs. 1200 <br>(Now Rs. 900)</p>
+            </div>
+            <div class="product" onclick="showProduct(1)">
+            <img src="images/totebag.png" alt="totebag">
+            <h2>tote bag</h2>
+            <p>Price: Rs. 150</p>
+            </div>
+             <div class="product" onclick="showProduct(9)">
+                <img src="images/towel.png" alt="Organic Cotton Face Towel">
+                <h2>Organic Cotton Face Towel</h2>
+                <p>Rs. 450</p>
+                <p>Now Rs. 350</p>
+            </div>
+             <div class="product" onclick="showProduct(4)">
+                <img src="images/beeswaxwrap.png" alt="Beeswax Food Wrap">
+                <h2>Beeswax Food Wrap</h2>
+                <p >Rs. 500</p>
+                <p >Now Rs. 400</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-background" id="model">
+    <div class="modal">
+    <div class="modal-image">
+      <img id="modalImg">
+    </div>
+    <div class="modal-content" >
+        
+        <h1 id="modalTitle" ></h1>
+        <hr>
+        <br>
+
+      <h2>Price:<span id="modalPrice"></span> </h2>
+  
+      <h2>Current Price:<span id="actualPrice" style="text-decoration-line: line-through;  text-decoration-thickness: 2.8px;"></span> </h2>
+
+        <br><h2> About this item</h2> <br>
+        <p id="modalDesc"></p><br>
+      
+        <h2>Ratings:
+          <span id="ratings" style="font-size: 30px; padding: 5px;"></p>
+        </h2><br>
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="back()">Back</button>
+    </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+<script> // inline js 
+    function showProduct(index){
+        //shows the hidden div
+        document.getElementById("model").style.display="flex";
+        
+        const product=products[index]; //gets the product
+
+        // sets the details/prop. of product
+    
+        document.getElementById("modalImg").src = product.img;
+        document.getElementById("modalTitle").textContent = product.name;
+        document.getElementById("modalPrice").textContent = product.price;
+        document.getElementById("actualPrice").textContent = product.actualPrice;
+        document.getElementById("modalDesc").textContent = product.desc;
+        document.getElementById("ratings").textContent = product.ratings;
+    }
+</script>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-grid">
+        <div class="logo">
+            <img src="image\logo.png" alt="EcoMart Logo">
+
+            <p style="font-weight: bold;">Ecomart</p> <br>
+
+            
+
+        </div>
+        <div>
+            <h4>About </h4>
+            <p>
+                We deliver premium quality organic products to keep 
+            </p>
+            <p>your surrounding clean and connect with nature.</p>
+        </div>
+
+
+        <div class="footer-text">
+            <h4>Follow Us</h4>
+            <a href="https://www.facebook.com/share/1HbYie2Tz5/">Facebook</a>
+            <a href="https://www.instagram.com/___aryan.g">Instagram</a>
+            <a href="mailto:aryan976333@gmail.com">G-mail</a>
+            
+        
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
